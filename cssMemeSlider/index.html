@@ -11,10 +11,16 @@
       <div class="main">
          <div class="slider-wrapper">
             <div class="slider-line">
-               <img class="slide-image" src="./assets/img/slide_1.png" alt="slide_item1">
+
+               <!-- <input id="slide_1" type="radio" name="btn" checked="">
+               <input id="slide_2" type="radio" name="btn">
+               <input id="slide_3" type="radio" name="btn">
+               <input id="slide_4" type="radio" name="btn"> -->
+
+               <img class="slide-image" src="./assets/img/slide_1.jpg" alt="slide_item1" id="first">
                <img class="slide-image" src="./assets/img/slide_2.png" alt="slide_item2">
-               <!-- <img class="slide-image" src="./assets/img/slide_3.png" alt="slide_item3">
-               <img class="slide-image" src="./assets/img/slide_4.png" alt="slide_item4"> -->
+               <img class="slide-image" src="./assets/img/slide_3.png" alt="slide_item3">
+               <img class="slide-image" src="./assets/img/slide_4.png" alt="slide_item4">
             </div>
          </div>
          
@@ -22,18 +28,30 @@
             <p class="slide-title">This is title!!!</p>
 
             <div class="navigation">
-               <label class="radio-custom">
-                  <input type="radio" name="btn" checked="">
-               </label>
-               <label class="radio-custom">
-                  <input type="radio" name="btn">
-               </label>
-               <label class="radio-custom">
-                  <input type="radio" name="btn">
-               </label>
-               <label class="radio-custom">
-                  <input type="radio" name="btn">
-               </label>
+               <div class="radio-custom">
+                  <input id="slide_1" type="radio" name="btn" checked="">
+                  <label for="slide_1">
+                     <span></span>
+                  </label>
+               </div>
+               <div class="radio-custom">
+                  <input id="slide_2" type="radio" name="btn">
+                  <label for="slide_2">
+                     <span></span>
+                  </label>
+               </div>
+               <div class="radio-custom">
+                  <input id="slide_3" type="radio" name="btn">
+                  <label for="slide_3">
+                     <span></span>
+                  </label>
+               </div>
+               <div class="radio-custom">
+                  <input id="slide_4" type="radio" name="btn">
+                  <label for="slide_4">
+                     <span></span>
+                  </label>
+               </div>
             </div>
          </div>
       </div>

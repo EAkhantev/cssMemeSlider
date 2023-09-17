@@ -14,39 +14,101 @@
 
 .main {
    background-color: brown;
+   padding: 0.625em;
+   margin: 1.25em;
+   border-radius: 0.625em;
 }
 
 .slider-wrapper {
    display: flex;
    white-space: nowrap;
    overflow: hidden;
-   /* width: calc(100% / 2);
-   width: fit-content;
-   width: 800px; */
-   border-radius: 1.5%/2.4%;
+   border-radius: 0.625em;
 }
 
 .slider-line {
    display: flex;
    white-space: nowrap;
    transition: all 1s;
-   width: 50em;
+   max-width: 50em;
 }
 
+.slider-line img {
+   width: 100%;
+   height: auto;
+}
 
 .navigation-wrapper {
    display: flex;
    justify-content: space-between;
+   align-items: center;
    margin-top: 1.25em;
+   margin-bottom: 0.625em;
 }
 
 .slide-title {
    color: #fff;
+   /* background-color: blueviolet; */
 }
 
-/* .navigation {
+.navigation {
    display: flex;
+   align-items: center;
+   /* background-color: blueviolet; */
+}
+
+.radio-custom input[type=radio] {
+   display: none;
+}
+
+/* Expanded area for click to radio */
+.radio-custom label {
+   display: inline-flex;
    justify-content: center;
-   background-color: blueviolet;
-   column-gap: 10px;
-} */
+   align-items: center;
+   width: 1.5em;
+   height: 1.5em;
+}
+
+.radio-custom label span {
+   width: 0.75em;
+   height: 0.75em;
+   background-color: #458dff;
+   border-radius: 50%;
+}
+
+.navigation label:hover {
+   cursor: pointer;
+   transform: scale(120%)
+}
+
+.navigation label:active {
+   filter: brightness(120%);
+}
+
+.radio-custom input:checked ~ label {
+   cursor: auto;
+   transform: scale(100%);
+}
+
+.radio-custom input:checked ~ label > span {
+   background-color: #ff8b64;
+   cursor: auto;
+   transform: scale(100%);
+}
+
+#slide_1:checked ~ #first {
+   margin-left: 0;
+}
+
+#slide_2:checked ~ #first {
+   margin-left: -100%;
+}
+
+#slide_3:checked ~ #first {
+   margin-left: -200%;
+}
+
+#slide_4:checked ~ #first {
+   margin-left: -300%;
+}
