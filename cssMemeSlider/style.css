@@ -36,18 +36,30 @@
 .slider-line img {
    width: 100%;
    height: auto;
+   transition: all 0.5s;
 }
 
 .navigation-wrapper {
    display: flex;
    justify-content: space-between;
    align-items: center;
+   overflow: hidden;
    margin-top: 1.25em;
    margin-bottom: 0.625em;
+   /* width: 6.5em; */
 }
 
-.slide-title {
+.slider-titles {
+   display: flex;
+   white-space: nowrap;
+   transition: all 1s;
+   width: 400%;
+}
+
+.slider-titles p {
+   width: 25%;
    color: #fff;
+   transition: all 0.5s;
    /* background-color: blueviolet; */
 }
 
@@ -57,11 +69,7 @@
    /* background-color: blueviolet; */
 }
 
-.radio-custom input[type=radio] {
-   display: none;
-}
-
-/* Expanded area for click to radio */
+/* Expanded area for click to dot point (radio) */
 .radio-custom label {
    display: inline-flex;
    justify-content: center;
@@ -86,29 +94,68 @@
    filter: brightness(120%);
 }
 
-.radio-custom input:checked ~ label {
+/* Style checked for area dot point */
+#slide_1:checked ~ .navigation-wrapper > .navigation > .radio-custom > .dot_1 {
    cursor: auto;
    transform: scale(100%);
 }
 
-.radio-custom input:checked ~ label > span {
+#slide_2:checked ~ .navigation-wrapper > .navigation > .radio-custom > .dot_2 {
+   cursor: auto;
+   transform: scale(100%);
+}
+
+#slide_3:checked ~ .navigation-wrapper > .navigation > .radio-custom > .dot_3 {
+   cursor: auto;
+   transform: scale(100%);
+}
+
+#slide_4:checked ~ .navigation-wrapper > .navigation > .radio-custom > .dot_4 {
+   cursor: auto;
+   transform: scale(100%);
+}
+
+/* Style checked for dot point */
+#slide_1:checked ~ .navigation-wrapper > .navigation > .radio-custom > .dot_1 > span {
    background-color: #ff8b64;
    cursor: auto;
    transform: scale(100%);
 }
 
-#slide_1:checked ~ #first {
+#slide_2:checked ~ .navigation-wrapper > .navigation > .radio-custom > .dot_2 > span {
+   background-color: #ff8b64;
+   cursor: auto;
+   transform: scale(100%);
+}
+
+#slide_3:checked ~ .navigation-wrapper > .navigation > .radio-custom > .dot_3 > span {
+   background-color: #ff8b64;
+   cursor: auto;
+   transform: scale(100%);
+}
+
+#slide_4:checked ~ .navigation-wrapper > .navigation > .radio-custom > .dot_4 > span {
+   background-color: #ff8b64;
+   cursor: auto;
+   transform: scale(100%);
+}
+
+.main input[type=radio]  {
+   display: none;
+}
+
+#slide_1:checked ~ .slider-wrapper > .slider-line #first-slide {
    margin-left: 0;
 }
 
-#slide_2:checked ~ #first {
+#slide_2:checked ~ .slider-wrapper > .slider-line #first-slide {
    margin-left: -100%;
 }
 
-#slide_3:checked ~ #first {
+#slide_3:checked ~ .slider-wrapper > .slider-line #first-slide {
    margin-left: -200%;
 }
 
-#slide_4:checked ~ #first {
+#slide_4:checked ~ .slider-wrapper > .slider-line #first-slide {
    margin-left: -300%;
 }
