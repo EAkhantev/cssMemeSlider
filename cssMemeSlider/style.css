@@ -14,23 +14,23 @@
 
 .main {
    background-color: brown;
-   padding: 0.625em;
-   margin: 1.25em;
-   border-radius: 0.625em;
+   padding: 0.625rem;
+   margin: 1.25rem;
+   border-radius: 0.625rem;
 }
 
 .slider-wrapper {
    display: flex;
    white-space: nowrap;
    overflow: hidden;
-   border-radius: 0.625em;
+   border-radius: 0.625rem;
 }
 
 .slider-line {
    display: flex;
    white-space: nowrap;
    transition: all 1s;
-   max-width: 50em;
+   max-width: 50rem;
 }
 
 .slider-line img {
@@ -43,8 +43,8 @@
    display: flex;
    justify-content: space-between;
    align-items: center;
-   margin-top: 1.25em;
-   margin-bottom: 0.625em;
+   margin-top: 1.25rem;
+   margin-bottom: 0.625rem;
 }
 
 .navigation-wrapper {
@@ -52,7 +52,7 @@
    justify-content: space-between;
    align-items: center;
    overflow: hidden;
-   max-width: 12.5em;
+   max-width: 12.5rem;
 }
 
 .slider-titles {
@@ -63,9 +63,11 @@
 }
 
 .slider-titles p {
-   min-width: 50em;
+   min-width: 50rem;
    color: #fff;
    transition: all 0.5s;
+   font-family: sans-serif;
+   font-size: 1.25rem;
    /* background-color: blueviolet; */
 }
 
@@ -80,13 +82,13 @@
    display: inline-flex;
    justify-content: center;
    align-items: center;
-   width: 1.5em;
-   height: 1.5em;
+   width: 1.5rem;
+   height: 1.5rem;
 }
 
 .radio-custom label span {
-   width: 0.75em;
-   height: 0.75em;
+   width: 0.75rem;
+   height: 0.75rem;
    background-color: #458dff;
    border-radius: 50%;
 }
@@ -101,22 +103,22 @@
 }
 
 /* Style checked for area dot point */
-#slide_1:checked ~ .navigation-wrapper > .navigation > .radio-custom > .dot_1 {
+#slide_1:checked ~ .controllers > .navigation > .radio-custom > .dot_1 {
    cursor: auto;
    transform: scale(100%);
 }
 
-#slide_2:checked ~ .navigation-wrapper > .navigation > .radio-custom > .dot_2 {
+#slide_2:checked ~ .controllers > .navigation > .radio-custom > .dot_2 {
    cursor: auto;
    transform: scale(100%);
 }
 
-#slide_3:checked ~ .navigation-wrapper > .navigation > .radio-custom > .dot_3 {
+#slide_3:checked ~ .controllers > .navigation > .radio-custom > .dot_3 {
    cursor: auto;
    transform: scale(100%);
 }
 
-#slide_4:checked ~ .navigation-wrapper > .navigation > .radio-custom > .dot_4 {
+#slide_4:checked ~ .controllers > .navigation > .radio-custom > .dot_4 {
    cursor: auto;
    transform: scale(100%);
 }
@@ -185,8 +187,8 @@
 @media (max-width: 390px) {
    .controllers {
       flex-direction: column-reverse;
-      margin-top: 0.625em;
-      gap: 0.625em
+      margin-top: 0.625rem;
+      gap: 0.625rem;
    }
 
    .navigation-wrapper {
