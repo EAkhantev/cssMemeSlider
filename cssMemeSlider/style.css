@@ -39,14 +39,20 @@
    transition: all 0.5s;
 }
 
+.controllers {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   margin-top: 1.25em;
+   margin-bottom: 0.625em;
+}
+
 .navigation-wrapper {
    display: flex;
    justify-content: space-between;
    align-items: center;
    overflow: hidden;
-   margin-top: 1.25em;
-   margin-bottom: 0.625em;
-   /* width: 6.5em; */
+   max-width: 12.5em;
 }
 
 .slider-titles {
@@ -57,7 +63,7 @@
 }
 
 .slider-titles p {
-   width: 25%;
+   min-width: 50em;
    color: #fff;
    transition: all 0.5s;
    /* background-color: blueviolet; */
@@ -116,25 +122,25 @@
 }
 
 /* Style checked for dot point */
-#slide_1:checked ~ .navigation-wrapper > .navigation > .radio-custom > .dot_1 > span {
+#slide_1:checked ~ .controllers > .navigation > .radio-custom > .dot_1 > span {
    background-color: #ff8b64;
    cursor: auto;
    transform: scale(100%);
 }
 
-#slide_2:checked ~ .navigation-wrapper > .navigation > .radio-custom > .dot_2 > span {
+#slide_2:checked ~ .controllers > .navigation > .radio-custom > .dot_2 > span {
    background-color: #ff8b64;
    cursor: auto;
    transform: scale(100%);
 }
 
-#slide_3:checked ~ .navigation-wrapper > .navigation > .radio-custom > .dot_3 > span {
+#slide_3:checked ~ .controllers > .navigation > .radio-custom > .dot_3 > span {
    background-color: #ff8b64;
    cursor: auto;
    transform: scale(100%);
 }
 
-#slide_4:checked ~ .navigation-wrapper > .navigation > .radio-custom > .dot_4 > span {
+#slide_4:checked ~ .controllers > .navigation > .radio-custom > .dot_4 > span {
    background-color: #ff8b64;
    cursor: auto;
    transform: scale(100%);
@@ -158,4 +164,32 @@
 
 #slide_4:checked ~ .slider-wrapper > .slider-line #first-slide {
    margin-left: -300%;
+}
+
+#slide_1:checked ~ .controllers > .navigation-wrapper > .slider-titles #first-title {
+   margin-left: 0%;
+}
+
+#slide_2:checked ~ .controllers > .navigation-wrapper > .slider-titles #first-title {
+   margin-left: -100%;
+}
+
+#slide_3:checked ~ .controllers > .navigation-wrapper > .slider-titles #first-title {
+   margin-left: -200%;
+}
+
+#slide_4:checked ~ .controllers > .navigation-wrapper > .slider-titles #first-title {
+   margin-left: -300%;
+}
+
+@media (max-width: 390px) {
+   .controllers {
+      flex-direction: column-reverse;
+      margin-top: 0.625em;
+      gap: 0.625em
+   }
+
+   .navigation-wrapper {
+      align-self: flex-start;
+   }
 }
